@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<!-- <link rel="stylesheet" href="styles.css"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="register.js"></script>
+	<title>New User Registration</title>
+</head>
+
+<body>
+	<fieldset name="Create an account">
+    <form method="post" action="register.html" id="reg_form">
+        First Name: <input type="text" id="fname" minlength=2 maxlength=32 title="Alphabet only" pattern="[a-zA-Z]+" required><br>
+        Last Name: <input type="text" id="lname" minlength=2 maxlength=32 title="Alphabet only" pattern="[a-zA-Z]+" required><br>
+        Address: <input type="text" id="address" minlength=4 maxlength=128 title="Alphanumeric plus &amp-.,# and space only" pattern="[a-zA-Z0-9&amp#., -]+" required><br>
+        Password: <input type="password" id="pwd" minlength=10 maxlength=128 required><br>
+		<details style="border:1px solid red;" id="pwd_requirements" open=true hidden=true>
+			Password must meet at least 3 of the following requirements:
+			<ul><li>1 uppercase character<br>
+			<li>1 lowercase character<br>
+			<li>1 digit<br>
+			<li>1 special character<br>
+			<li>No 3 of the same characte rin a row.<br></ul>
+			In addition to being between 10 to 128 characters long.</details>
+        Confirm Password: <input type="password" id="confirm_pwd" required><br>
+        <input type="submit">
+	</form>
+	</fieldset>
+</body>
+
+</html>

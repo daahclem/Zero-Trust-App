@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="home.js"></script>
+    <title>My Probably Secure Bank - Home</title>
+</head>
+<body>
+    <div>
+        Hello <span class="name"></span>!
+    </div>
+    <style type="text/css">
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 0.25em;
+        }
+        a {
+            color: black;
+            background-color:gray;
+            border: 1px solid black;
+            padding: 0.25em;
+        }
+        button {
+            color: black;
+            border: 1px solid black;
+            border-radius: 2em;
+            background-color: lightblue;
+            padding: 0.25em;
+            margin: 0.1em 0;
+        }
+        a:hover, button:hover { color:yellow; }
+        select { size:1; }
+    </style>
+    <table id="accounts">
+        <caption>Accounts</caption>
+    </table><br>
+    <div id="below_accounts">
+        <button id="create">Make a new account?</button><br>
+        <button id="transfer" class="expando">Transfer between accounts?</button>
+        <fieldset id="t_block" hidden=true>
+            From: <select id="t_from"></select>
+             To:<select id="t_to"></select><br>
+            Amount: <input type="number" step="0.01" min="0.01" id="t_amt"><br>
+            <button id="t_btn">Ok Transfer</button>
+        </fieldset><br>
+        <button id="deposit" class="expando">Deposit</button>
+        <fieldset id="d_block" hidden=true>
+            Into: <select id="into"></select><br>
+            Amount: <input type="number" step="0.01" min="0.01" id="d_amt"><br>
+            <button id="d_btn">Ok Deposit</button>
+        </fieldset><br>
+        <button id="create" class="expando">Withdraw</button>
+        <fieldset id="w_block" hidden=true>
+            Out of: <select id="outof"></select><br>
+            Amount: <input type="number" step="0.01" min="0.01" id="w_amt"><br>
+            <button id="w_btn">Ok Withdrawal</button>
+        </fieldset><br><br>
+        <a href="/logout" id="logout">Logout</a>
+    </div>
+</body>
+</html>
